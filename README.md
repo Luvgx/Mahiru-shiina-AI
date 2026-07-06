@@ -2,16 +2,25 @@
 
 An open-source AI Desktop Assistant built with Python.
 
-## Features
+# Current Progress
 
-- Voice Assistant
-- AI Chat
-- Desktop Automation
-- Browser Automation
-- Coding Assistant
-- Vision
-- Memory
-- Multi-Agent System
+## Phase 1 - Voice System
+
+- [x] Project Structure
+- [x] Virtual Environment
+- [x] Configuration System
+- [x] Text-to-Speech using Edge TTS
+- [x] Audio Playback
+- [x] Audio Cleanup
+
+## Next Goals
+
+- [ ] Speech Recognition
+- [ ] Wake Word Detection
+- [ ] Gemini Integration
+- [ ] Memory System
+- [ ] Desktop Automation
+- [ ] Vision Module
 
 Developer:
 Siddhant Tripathi
