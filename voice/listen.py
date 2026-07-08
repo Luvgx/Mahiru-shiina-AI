@@ -10,18 +10,18 @@ def initialize_microphone():
     return microphone
 
 def capture_audio(recognizer, microphone):
-    with microphone as source: #it will automaticaly close progamme!
-        print("Listening...") 
+    with microphone as source: ## Automatically releases the microphone resource
+        print(f"{USER_NAME}, I'm listening...") ### Microphone is automatically closed after recording
         recognizer.adjust_for_ambient_noise(source, duration=1)
-        audio = recognizer.listen(source)
+        audio = recognizer.listen(source, timeout=5, phrase_time_limit=10)
         return audio
 
 def speech_to_text(recognizer, audio):
     try:
-        text = recognizer.recognize_google(audio)
+        text = recognizer.recognize_google(audio, language="en-IN")
         return text
     except sr.UnknownValueError:
-        print("Sorry, I couldn't understand.")
+        print("Sorry", f"{USER_NAME}, I couldn't understand.")
         return None
     except sr.RequestError as e:
         print(f"Speech Recognition Error: {e}")
